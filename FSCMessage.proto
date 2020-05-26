@@ -23,6 +23,35 @@ message CreateGroupRequest
 	optional MessageContent notify_content = 3;
 }
 
+message DismissGroupRequest
+{
+	required string group_id = 1;
+	repeated int32 to_line = 2;
+	optional MessageContent notify_content = 3;
+}
+
+message PullUserRequest
+{
+	repeated UserRequest request = 1;
+}
+
+message UserRequest
+{
+	required string uid = 1;
+	optional int64 update_dt = 2;
+}
+
+message PullGroupMemberRequest
+{
+	required string target = 1;
+	required int64 head = 2;
+}
+
+message Version
+{
+	required int64 version = 1;
+}
+
 message Group
 {
 	required GroupInfo group_info = 1;
@@ -63,4 +92,12 @@ message MessageContent
 	optional int32 expire_duration = 9;
 	optional int32 mentioned_type = 10;
 	repeated string mentioned_target = 11;
+}
+
+message GetUploadTokenResult
+{
+	required string domain = 1;
+	required string token = 2;
+	required string server = 3;
+	optional int32 port = 4;
 }
