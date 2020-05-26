@@ -47,6 +47,98 @@ message PullGroupMemberRequest
 	required int64 head = 2;
 }
 
+message HandleFriendRequest
+{
+	required string target_uid = 1;
+	required int32 status = 2;
+}
+
+message RemoveGroupMemberRequest
+{
+	required string group_id = 1;
+	repeated string removed_member = 2;
+	repeated int32 to_line = 3;
+	optional MessageContent notify_content = 4;
+}
+
+message ModifyGroupInfoRequest
+{
+	required string group_id = 1;
+	required int32 type = 2;
+	required string value = 3;
+	repeated int32 to_line = 4;
+	optional MessageContent notify_content = 5;
+}
+
+message QuitGroupRequest
+{
+	required string group_id = 1;
+	repeated int32 to_line = 2;
+	optional MessageContent notify_content = 3;
+}
+
+message ModifyMyInfoRequest
+{
+	repeated InfoEntry entry = 1;
+}
+
+message InfoEntry
+{
+	required int32 type = 1;
+	required string value = 2;
+}
+
+message SearchUserRequest
+{
+	required string keyword = 1;
+	optional int32 fuzzy = 2;
+	optional int32 page = 3;
+}
+
+message INT64Buf
+{
+	required int64 id = 1;
+}
+
+message PullMessageRequest
+{
+	required int64 id = 1;
+	required int32 type = 2;
+	optional int64 delay = 3;
+}
+
+message PullMessageResult
+{
+	repeated Message message = 1;
+	required int64 current = 2;
+	required int64 head = 3;
+}
+
+message Message
+{
+	required Conversation conversation = 1;
+	required string from_user = 2;
+	required MessageContent content = 3;
+	optional int64 message_id = 4;
+	optional int64 server_timestamp = 5;
+	optional string to_user = 6;
+	repeated string to = 7;
+}
+
+message LoadRemoteMessages
+{
+	required Conversation conversation = 1;
+	required int64 before_uid = 2;
+	required int32 count = 3;
+}
+
+message Conversation
+{
+	required int32 type = 1;
+	required string target = 2;
+	required int32 line = 3;
+}
+
 message Version
 {
 	required int64 version = 1;
