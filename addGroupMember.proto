@@ -1,0 +1,19 @@
+package im;
+option java_package = "com.comsince.github.proto";
+option java_outer_classname = "FXCAddGroupMemberRequestMessage";
+
+
+message AddGroupMemberRequest 
+{
+	required string groupId = 1;
+	repeated GroupMember added_member = 2;
+	repeated int32 to_line = 3;
+}
+
+message GroupMember
+{
+	required string memberId = 1;
+	optional string alias = 2;
+	required int32 type = 3;
+	optional int64 update_dt = 4;
+}

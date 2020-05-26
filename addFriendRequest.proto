@@ -1,0 +1,9 @@
+package im;
+option java_package = "com.comsince.github.proto";
+option java_outer_classname = "FXCAddFriendRequestMessage";
+
+message AddFriendRequest
+{
+  required string targetUid = 1;
+  required string reason = 2;
+}
