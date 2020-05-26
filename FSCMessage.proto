@@ -4,15 +4,42 @@ option java_outer_classname = "FSCMessage";
 
 message AddFriendRequest
 {
-  required string targetUid = 1;
+  required string target_uid = 1;
   required string reason = 2;
 }
 
 message AddGroupMemberRequest 
 {
-	required string groupId = 1;
+	required string group_id = 1;
 	repeated GroupMember added_member = 2;
 	repeated int32 to_line = 3;
+	optional MessageContent notify_content = 4;
+}
+
+message CreateGroupRequest
+{
+	required Group group = 1;
+	repeated int32 to_line = 2;
+	optional MessageContent notify_content = 3;
+}
+
+message Group
+{
+	required GroupInfo group_info = 1;
+	repeated GroupMember members = 2;
+}
+
+message GroupInfo
+{
+	optional string target_id = 1;
+	required string name = 2;
+	optional string portrait = 3;
+	optional string owner = 4;
+	required int32 type = 5;
+	optional int32 member_count = 6;
+	optional string extra = 7;
+	optional int64 update_dt = 8;
+	optional int64 member_update_dt = 9;
 }
 
 message GroupMember
@@ -21,4 +48,19 @@ message GroupMember
 	optional string alias = 2;
 	required int32 type = 3;
 	optional int64 update_dt = 4;
+}
+
+message MessageContent
+{
+	required int32 type = 1;
+	optional string searchable_content = 2;
+	optional string push_content = 3;
+	optional string content = 4;
+	optional bytes data = 5;
+	optional int32 mediaType = 6;
+	optional string remoteMediaUrl = 7;
+	optional int32 persist_flag = 8;
+	optional int32 expire_duration = 9;
+	optional int32 mentioned_type = 10;
+	repeated string mentioned_target = 11;
 }
