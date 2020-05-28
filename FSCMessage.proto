@@ -352,3 +352,17 @@ message Robot
 	optional string callback = 5;
 	optional string extra = 6;
 }
+
+message RouteRequest
+{
+	optional string app = 1;
+	optional int32 platform = 2;
+	optional int32 push_type = 3;
+	optional string device_name = 4;
+	optional string device_version = 5;
+	optional string phone_name = 6;
+	optional string language = 7;
+	optional string carrier_name = 8;
+	optional string app_version = 9;
+	optional string sdk_version = 10;
+}
