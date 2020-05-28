@@ -193,3 +193,20 @@ message GetUploadTokenResult
 	required string server = 3;
 	optional int32 port = 4;
 }
+
+message User
+{
+	required string uid = 1;
+	optional string name = 2;
+	optional string display_name = 3;
+	optional string portrait = 4;
+	optional string mobile = 5;
+	optional string email = 6;
+	optional string address = 7;
+	optional string company = 8;
+	optional string extra = 9;
+	optional int64 update_dt = 10;
+	optional int32 gender = 11;
+	optional string social = 12;
+	optional int32 type = 13;
+}
