@@ -125,6 +125,16 @@ message PullMessageResult
 	required int64 head = 3;
 }
 
+message PullGroupInfoResult
+{
+	repeated GroupInfo info = 1;
+}
+
+message PullGroupMemberResult
+{
+	repeated GroupMember member = 1;
+}
+
 message Message
 {
 	required Conversation conversation = 1;
