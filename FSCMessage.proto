@@ -2,6 +2,17 @@ package im;
 option java_package = "com.comsince.github.proto";
 option java_outer_classname = "FSCMessage";
 
+message ConnectAckPayload
+{
+	optional int64 msg_head = 1;
+	optional int64 friend_head = 2;
+	optional int64 friend_rq_head = 3;
+	optional int64 setting_head = 4;
+	optional string node_addr = 5;
+	optional int32 node_port = 6;
+	optional int64 server_time = 7;
+}
+
 message AddFriendRequest
 {
   required string target_uid = 1;
@@ -186,12 +197,57 @@ message MessageContent
 	repeated string mentioned_target = 11;
 }
 
+message SearchUserResult
+{
+	repeated User entry = 1;
+}
+
 message GetUploadTokenResult
 {
 	required string domain = 1;
 	required string token = 2;
 	required string server = 3;
 	optional int32 port = 4;
+}
+
+message PullUserResult
+{
+	repeated UserResult result = 1;
+}
+
+message UserResult
+{
+	required User user = 1;
+	required int32 code = 2;
+}
+
+message GetFriendsResult
+{
+	repeated Friend entry = 1;
+}
+
+message GetFriendRequestResult
+{
+	repeated FriendRequest entry = 1;
+}
+
+message FriendRequest
+{
+	optional string from_uid = 1;
+	required string to_uid = 2;
+	required string reason = 3;
+	optional int32 status = 4;
+	optional int64 update_dt = 5;
+	optional bool from_read_status = 6;
+	optional bool to_read_status = 7;
+}
+
+message Friend
+{
+	required string uid = 1;
+	required int32 state = 2;
+	required int64 update_dt = 3;
+	optional string alias = 4;
 }
 
 message User
@@ -209,4 +265,17 @@ message User
 	optional int32 gender = 11;
 	optional string social = 12;
 	optional int32 type = 13;
+}
+
+message NotifyMessage
+{
+	required int32 type = 1;
+	required int64 head = 2;
+	optional string target = 3;
+}
+
+message NotifyRecallMessage
+{
+	required int64 id = 1;
+	required string from_user = 2;
 }
