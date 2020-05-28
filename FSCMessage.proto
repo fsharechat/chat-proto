@@ -305,6 +305,11 @@ message ModifyUserSettingReq
 	required string value = 3;
 }
 
+message GetUserSettingResult
+{
+	repeated UserSettingEntry entry = 1;
+}
+
 message ChannelInfo
 {
 	optional string target_id = 1;
@@ -318,4 +323,32 @@ message ChannelInfo
 	optional string secret = 9;
 	optional string callback = 10;
 	optional int32 automatic = 11;
+}
+
+message ChatroomInfo
+{
+	required string title = 1;
+	optional string desc = 2;
+	optional string portrait = 3;
+	optional int32 member_count = 4;
+	optional int64 create_dt = 5;
+	optional int64 update_dt = 6;
+	optional string extra = 7;
+	optional int32 state = 8;
+}
+
+message ChatroomMemberInfo
+{
+	optional int32 member_count = 1;
+	repeated string members = 2;
+}
+
+message Robot
+{
+	required string uid = 1;
+	required int32 state = 2;
+	optional string owner = 3;
+	optional string secret = 4;
+	optional string callback = 5;
+	optional string extra = 6;
 }
