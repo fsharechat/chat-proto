@@ -25494,6 +25494,1446 @@ public final class FSCMessage {
     // @@protoc_insertion_point(class_scope:im.GetUploadTokenResult)
   }
 
+  public interface GetMinioUploadUrlRequestOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // required int32 type = 1;
+    /**
+     * <code>required int32 type = 1;</code>
+     */
+    boolean hasType();
+    /**
+     * <code>required int32 type = 1;</code>
+     */
+    int getType();
+
+    // required string key = 2;
+    /**
+     * <code>required string key = 2;</code>
+     */
+    boolean hasKey();
+    /**
+     * <code>required string key = 2;</code>
+     */
+    java.lang.String getKey();
+    /**
+     * <code>required string key = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getKeyBytes();
+  }
+  /**
+   * Protobuf type {@code im.GetMinioUploadUrlRequest}
+   */
+  public static final class GetMinioUploadUrlRequest extends
+      com.google.protobuf.GeneratedMessage
+      implements GetMinioUploadUrlRequestOrBuilder {
+    // Use GetMinioUploadUrlRequest.newBuilder() to construct.
+    private GetMinioUploadUrlRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private GetMinioUploadUrlRequest(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final GetMinioUploadUrlRequest defaultInstance;
+    public static GetMinioUploadUrlRequest getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public GetMinioUploadUrlRequest getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetMinioUploadUrlRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              type_ = input.readInt32();
+              break;
+            }
+            case 18: {
+              bitField0_ |= 0x00000002;
+              key_ = input.readBytes();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comsince.github.proto.FSCMessage.internal_static_im_GetMinioUploadUrlRequest_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comsince.github.proto.FSCMessage.internal_static_im_GetMinioUploadUrlRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comsince.github.proto.FSCMessage.GetMinioUploadUrlRequest.class, com.comsince.github.proto.FSCMessage.GetMinioUploadUrlRequest.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<GetMinioUploadUrlRequest> PARSER =
+        new com.google.protobuf.AbstractParser<GetMinioUploadUrlRequest>() {
+      public GetMinioUploadUrlRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetMinioUploadUrlRequest(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetMinioUploadUrlRequest> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // required int32 type = 1;
+    public static final int TYPE_FIELD_NUMBER = 1;
+    private int type_;
+    /**
+     * <code>required int32 type = 1;</code>
+     */
+    public boolean hasType() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required int32 type = 1;</code>
+     */
+    public int getType() {
+      return type_;
+    }
+
+    // required string key = 2;
+    public static final int KEY_FIELD_NUMBER = 2;
+    private java.lang.Object key_;
+    /**
+     * <code>required string key = 2;</code>
+     */
+    public boolean hasKey() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>required string key = 2;</code>
+     */
+    public java.lang.String getKey() {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          key_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string key = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getKeyBytes() {
+      java.lang.Object ref = key_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        key_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private void initFields() {
+      type_ = 0;
+      key_ = "";
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasType()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasKey()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, type_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getKeyBytes());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, type_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getKeyBytes());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.comsince.github.proto.FSCMessage.GetMinioUploadUrlRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comsince.github.proto.FSCMessage.GetMinioUploadUrlRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comsince.github.proto.FSCMessage.GetMinioUploadUrlRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comsince.github.proto.FSCMessage.GetMinioUploadUrlRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comsince.github.proto.FSCMessage.GetMinioUploadUrlRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.comsince.github.proto.FSCMessage.GetMinioUploadUrlRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.comsince.github.proto.FSCMessage.GetMinioUploadUrlRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.comsince.github.proto.FSCMessage.GetMinioUploadUrlRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.comsince.github.proto.FSCMessage.GetMinioUploadUrlRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.comsince.github.proto.FSCMessage.GetMinioUploadUrlRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.comsince.github.proto.FSCMessage.GetMinioUploadUrlRequest prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code im.GetMinioUploadUrlRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.comsince.github.proto.FSCMessage.GetMinioUploadUrlRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comsince.github.proto.FSCMessage.internal_static_im_GetMinioUploadUrlRequest_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comsince.github.proto.FSCMessage.internal_static_im_GetMinioUploadUrlRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comsince.github.proto.FSCMessage.GetMinioUploadUrlRequest.class, com.comsince.github.proto.FSCMessage.GetMinioUploadUrlRequest.Builder.class);
+      }
+
+      // Construct using com.comsince.github.proto.FSCMessage.GetMinioUploadUrlRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        type_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        key_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comsince.github.proto.FSCMessage.internal_static_im_GetMinioUploadUrlRequest_descriptor;
+      }
+
+      public com.comsince.github.proto.FSCMessage.GetMinioUploadUrlRequest getDefaultInstanceForType() {
+        return com.comsince.github.proto.FSCMessage.GetMinioUploadUrlRequest.getDefaultInstance();
+      }
+
+      public com.comsince.github.proto.FSCMessage.GetMinioUploadUrlRequest build() {
+        com.comsince.github.proto.FSCMessage.GetMinioUploadUrlRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.comsince.github.proto.FSCMessage.GetMinioUploadUrlRequest buildPartial() {
+        com.comsince.github.proto.FSCMessage.GetMinioUploadUrlRequest result = new com.comsince.github.proto.FSCMessage.GetMinioUploadUrlRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.type_ = type_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.key_ = key_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comsince.github.proto.FSCMessage.GetMinioUploadUrlRequest) {
+          return mergeFrom((com.comsince.github.proto.FSCMessage.GetMinioUploadUrlRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comsince.github.proto.FSCMessage.GetMinioUploadUrlRequest other) {
+        if (other == com.comsince.github.proto.FSCMessage.GetMinioUploadUrlRequest.getDefaultInstance()) return this;
+        if (other.hasType()) {
+          setType(other.getType());
+        }
+        if (other.hasKey()) {
+          bitField0_ |= 0x00000002;
+          key_ = other.key_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasType()) {
+          
+          return false;
+        }
+        if (!hasKey()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.comsince.github.proto.FSCMessage.GetMinioUploadUrlRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.comsince.github.proto.FSCMessage.GetMinioUploadUrlRequest) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // required int32 type = 1;
+      private int type_ ;
+      /**
+       * <code>required int32 type = 1;</code>
+       */
+      public boolean hasType() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>required int32 type = 1;</code>
+       */
+      public int getType() {
+        return type_;
+      }
+      /**
+       * <code>required int32 type = 1;</code>
+       */
+      public Builder setType(int value) {
+        bitField0_ |= 0x00000001;
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required int32 type = 1;</code>
+       */
+      public Builder clearType() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        type_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required string key = 2;
+      private java.lang.Object key_ = "";
+      /**
+       * <code>required string key = 2;</code>
+       */
+      public boolean hasKey() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>required string key = 2;</code>
+       */
+      public java.lang.String getKey() {
+        java.lang.Object ref = key_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          key_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string key = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getKeyBytes() {
+        java.lang.Object ref = key_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          key_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string key = 2;</code>
+       */
+      public Builder setKey(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        key_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string key = 2;</code>
+       */
+      public Builder clearKey() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        key_ = getDefaultInstance().getKey();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string key = 2;</code>
+       */
+      public Builder setKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        key_ = value;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:im.GetMinioUploadUrlRequest)
+    }
+
+    static {
+      defaultInstance = new GetMinioUploadUrlRequest(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:im.GetMinioUploadUrlRequest)
+  }
+
+  public interface GetMinioUploadUrlResultOrBuilder
+      extends com.google.protobuf.MessageOrBuilder {
+
+    // optional string domain = 1;
+    /**
+     * <code>optional string domain = 1;</code>
+     */
+    boolean hasDomain();
+    /**
+     * <code>optional string domain = 1;</code>
+     */
+    java.lang.String getDomain();
+    /**
+     * <code>optional string domain = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getDomainBytes();
+
+    // optional string server = 2;
+    /**
+     * <code>optional string server = 2;</code>
+     */
+    boolean hasServer();
+    /**
+     * <code>optional string server = 2;</code>
+     */
+    java.lang.String getServer();
+    /**
+     * <code>optional string server = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getServerBytes();
+
+    // optional int32 port = 3;
+    /**
+     * <code>optional int32 port = 3;</code>
+     */
+    boolean hasPort();
+    /**
+     * <code>optional int32 port = 3;</code>
+     */
+    int getPort();
+
+    // required string url = 4;
+    /**
+     * <code>required string url = 4;</code>
+     */
+    boolean hasUrl();
+    /**
+     * <code>required string url = 4;</code>
+     */
+    java.lang.String getUrl();
+    /**
+     * <code>required string url = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getUrlBytes();
+  }
+  /**
+   * Protobuf type {@code im.GetMinioUploadUrlResult}
+   */
+  public static final class GetMinioUploadUrlResult extends
+      com.google.protobuf.GeneratedMessage
+      implements GetMinioUploadUrlResultOrBuilder {
+    // Use GetMinioUploadUrlResult.newBuilder() to construct.
+    private GetMinioUploadUrlResult(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private GetMinioUploadUrlResult(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final GetMinioUploadUrlResult defaultInstance;
+    public static GetMinioUploadUrlResult getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public GetMinioUploadUrlResult getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetMinioUploadUrlResult(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              bitField0_ |= 0x00000001;
+              domain_ = input.readBytes();
+              break;
+            }
+            case 18: {
+              bitField0_ |= 0x00000002;
+              server_ = input.readBytes();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              port_ = input.readInt32();
+              break;
+            }
+            case 34: {
+              bitField0_ |= 0x00000008;
+              url_ = input.readBytes();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.comsince.github.proto.FSCMessage.internal_static_im_GetMinioUploadUrlResult_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.comsince.github.proto.FSCMessage.internal_static_im_GetMinioUploadUrlResult_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.comsince.github.proto.FSCMessage.GetMinioUploadUrlResult.class, com.comsince.github.proto.FSCMessage.GetMinioUploadUrlResult.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<GetMinioUploadUrlResult> PARSER =
+        new com.google.protobuf.AbstractParser<GetMinioUploadUrlResult>() {
+      public GetMinioUploadUrlResult parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetMinioUploadUrlResult(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetMinioUploadUrlResult> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    // optional string domain = 1;
+    public static final int DOMAIN_FIELD_NUMBER = 1;
+    private java.lang.Object domain_;
+    /**
+     * <code>optional string domain = 1;</code>
+     */
+    public boolean hasDomain() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional string domain = 1;</code>
+     */
+    public java.lang.String getDomain() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          domain_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string domain = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDomainBytes() {
+      java.lang.Object ref = domain_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        domain_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    // optional string server = 2;
+    public static final int SERVER_FIELD_NUMBER = 2;
+    private java.lang.Object server_;
+    /**
+     * <code>optional string server = 2;</code>
+     */
+    public boolean hasServer() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional string server = 2;</code>
+     */
+    public java.lang.String getServer() {
+      java.lang.Object ref = server_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          server_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string server = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getServerBytes() {
+      java.lang.Object ref = server_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        server_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    // optional int32 port = 3;
+    public static final int PORT_FIELD_NUMBER = 3;
+    private int port_;
+    /**
+     * <code>optional int32 port = 3;</code>
+     */
+    public boolean hasPort() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional int32 port = 3;</code>
+     */
+    public int getPort() {
+      return port_;
+    }
+
+    // required string url = 4;
+    public static final int URL_FIELD_NUMBER = 4;
+    private java.lang.Object url_;
+    /**
+     * <code>required string url = 4;</code>
+     */
+    public boolean hasUrl() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>required string url = 4;</code>
+     */
+    public java.lang.String getUrl() {
+      java.lang.Object ref = url_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          url_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>required string url = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getUrlBytes() {
+      java.lang.Object ref = url_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        url_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private void initFields() {
+      domain_ = "";
+      server_ = "";
+      port_ = 0;
+      url_ = "";
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized != -1) return isInitialized == 1;
+
+      if (!hasUrl()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, getDomainBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getServerBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeInt32(3, port_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeBytes(4, getUrlBytes());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getDomainBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getServerBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, port_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, getUrlBytes());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static com.comsince.github.proto.FSCMessage.GetMinioUploadUrlResult parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comsince.github.proto.FSCMessage.GetMinioUploadUrlResult parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comsince.github.proto.FSCMessage.GetMinioUploadUrlResult parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.comsince.github.proto.FSCMessage.GetMinioUploadUrlResult parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.comsince.github.proto.FSCMessage.GetMinioUploadUrlResult parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.comsince.github.proto.FSCMessage.GetMinioUploadUrlResult parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static com.comsince.github.proto.FSCMessage.GetMinioUploadUrlResult parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static com.comsince.github.proto.FSCMessage.GetMinioUploadUrlResult parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static com.comsince.github.proto.FSCMessage.GetMinioUploadUrlResult parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static com.comsince.github.proto.FSCMessage.GetMinioUploadUrlResult parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(com.comsince.github.proto.FSCMessage.GetMinioUploadUrlResult prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code im.GetMinioUploadUrlResult}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder>
+       implements com.comsince.github.proto.FSCMessage.GetMinioUploadUrlResultOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.comsince.github.proto.FSCMessage.internal_static_im_GetMinioUploadUrlResult_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.comsince.github.proto.FSCMessage.internal_static_im_GetMinioUploadUrlResult_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.comsince.github.proto.FSCMessage.GetMinioUploadUrlResult.class, com.comsince.github.proto.FSCMessage.GetMinioUploadUrlResult.Builder.class);
+      }
+
+      // Construct using com.comsince.github.proto.FSCMessage.GetMinioUploadUrlResult.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        domain_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        server_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        port_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        url_ = "";
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.comsince.github.proto.FSCMessage.internal_static_im_GetMinioUploadUrlResult_descriptor;
+      }
+
+      public com.comsince.github.proto.FSCMessage.GetMinioUploadUrlResult getDefaultInstanceForType() {
+        return com.comsince.github.proto.FSCMessage.GetMinioUploadUrlResult.getDefaultInstance();
+      }
+
+      public com.comsince.github.proto.FSCMessage.GetMinioUploadUrlResult build() {
+        com.comsince.github.proto.FSCMessage.GetMinioUploadUrlResult result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.comsince.github.proto.FSCMessage.GetMinioUploadUrlResult buildPartial() {
+        com.comsince.github.proto.FSCMessage.GetMinioUploadUrlResult result = new com.comsince.github.proto.FSCMessage.GetMinioUploadUrlResult(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.domain_ = domain_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.server_ = server_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.port_ = port_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.url_ = url_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.comsince.github.proto.FSCMessage.GetMinioUploadUrlResult) {
+          return mergeFrom((com.comsince.github.proto.FSCMessage.GetMinioUploadUrlResult)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.comsince.github.proto.FSCMessage.GetMinioUploadUrlResult other) {
+        if (other == com.comsince.github.proto.FSCMessage.GetMinioUploadUrlResult.getDefaultInstance()) return this;
+        if (other.hasDomain()) {
+          bitField0_ |= 0x00000001;
+          domain_ = other.domain_;
+          onChanged();
+        }
+        if (other.hasServer()) {
+          bitField0_ |= 0x00000002;
+          server_ = other.server_;
+          onChanged();
+        }
+        if (other.hasPort()) {
+          setPort(other.getPort());
+        }
+        if (other.hasUrl()) {
+          bitField0_ |= 0x00000008;
+          url_ = other.url_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        if (!hasUrl()) {
+          
+          return false;
+        }
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.comsince.github.proto.FSCMessage.GetMinioUploadUrlResult parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.comsince.github.proto.FSCMessage.GetMinioUploadUrlResult) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      // optional string domain = 1;
+      private java.lang.Object domain_ = "";
+      /**
+       * <code>optional string domain = 1;</code>
+       */
+      public boolean hasDomain() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional string domain = 1;</code>
+       */
+      public java.lang.String getDomain() {
+        java.lang.Object ref = domain_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          domain_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string domain = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDomainBytes() {
+        java.lang.Object ref = domain_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          domain_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string domain = 1;</code>
+       */
+      public Builder setDomain(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        domain_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string domain = 1;</code>
+       */
+      public Builder clearDomain() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        domain_ = getDefaultInstance().getDomain();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string domain = 1;</code>
+       */
+      public Builder setDomainBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        domain_ = value;
+        onChanged();
+        return this;
+      }
+
+      // optional string server = 2;
+      private java.lang.Object server_ = "";
+      /**
+       * <code>optional string server = 2;</code>
+       */
+      public boolean hasServer() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional string server = 2;</code>
+       */
+      public java.lang.String getServer() {
+        java.lang.Object ref = server_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          server_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string server = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getServerBytes() {
+        java.lang.Object ref = server_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          server_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string server = 2;</code>
+       */
+      public Builder setServer(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        server_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string server = 2;</code>
+       */
+      public Builder clearServer() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        server_ = getDefaultInstance().getServer();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string server = 2;</code>
+       */
+      public Builder setServerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        server_ = value;
+        onChanged();
+        return this;
+      }
+
+      // optional int32 port = 3;
+      private int port_ ;
+      /**
+       * <code>optional int32 port = 3;</code>
+       */
+      public boolean hasPort() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional int32 port = 3;</code>
+       */
+      public int getPort() {
+        return port_;
+      }
+      /**
+       * <code>optional int32 port = 3;</code>
+       */
+      public Builder setPort(int value) {
+        bitField0_ |= 0x00000004;
+        port_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 port = 3;</code>
+       */
+      public Builder clearPort() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        port_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // required string url = 4;
+      private java.lang.Object url_ = "";
+      /**
+       * <code>required string url = 4;</code>
+       */
+      public boolean hasUrl() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>required string url = 4;</code>
+       */
+      public java.lang.String getUrl() {
+        java.lang.Object ref = url_;
+        if (!(ref instanceof java.lang.String)) {
+          java.lang.String s = ((com.google.protobuf.ByteString) ref)
+              .toStringUtf8();
+          url_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>required string url = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getUrlBytes() {
+        java.lang.Object ref = url_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          url_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>required string url = 4;</code>
+       */
+      public Builder setUrl(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        url_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string url = 4;</code>
+       */
+      public Builder clearUrl() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        url_ = getDefaultInstance().getUrl();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>required string url = 4;</code>
+       */
+      public Builder setUrlBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        url_ = value;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:im.GetMinioUploadUrlResult)
+    }
+
+    static {
+      defaultInstance = new GetMinioUploadUrlResult(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:im.GetMinioUploadUrlResult)
+  }
+
   public interface PullUserResultOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
 
@@ -42421,6 +43861,16 @@ public final class FSCMessage {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_im_GetUploadTokenResult_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_im_GetMinioUploadUrlRequest_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_im_GetMinioUploadUrlRequest_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
+    internal_static_im_GetMinioUploadUrlResult_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_im_GetMinioUploadUrlResult_fieldAccessorTable;
+  private static com.google.protobuf.Descriptors.Descriptor
     internal_static_im_PullUserResult_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -42584,51 +44034,55 @@ public final class FSCMessage {
       "ntioned_target\030\013 \003(\t\"+\n\020SearchUserResult" +
       "\022\027\n\005entry\030\001 \003(\0132\010.im.User\"S\n\024GetUploadTo" +
       "kenResult\022\016\n\006domain\030\001 \002(\t\022\r\n\005token\030\002 \002(\t",
-      "\022\016\n\006server\030\003 \002(\t\022\014\n\004port\030\004 \001(\005\"0\n\016PullUs" +
-      "erResult\022\036\n\006result\030\001 \003(\0132\016.im.UserResult" +
-      "\"2\n\nUserResult\022\026\n\004user\030\001 \002(\0132\010.im.User\022\014" +
-      "\n\004code\030\002 \002(\005\"-\n\020GetFriendsResult\022\031\n\005entr" +
-      "y\030\001 \003(\0132\n.im.Friend\":\n\026GetFriendRequestR" +
-      "esult\022 \n\005entry\030\001 \003(\0132\021.im.FriendRequest\"" +
-      "\226\001\n\rFriendRequest\022\020\n\010from_uid\030\001 \001(\t\022\016\n\006t" +
-      "o_uid\030\002 \002(\t\022\016\n\006reason\030\003 \002(\t\022\016\n\006status\030\004 " +
-      "\001(\005\022\021\n\tupdate_dt\030\005 \001(\003\022\030\n\020from_read_stat" +
-      "us\030\006 \001(\010\022\026\n\016to_read_status\030\007 \001(\010\"F\n\006Frie",
-      "nd\022\013\n\003uid\030\001 \002(\t\022\r\n\005state\030\002 \002(\005\022\021\n\tupdate" +
-      "_dt\030\003 \002(\003\022\r\n\005alias\030\004 \001(\t\"\332\001\n\004User\022\013\n\003uid" +
-      "\030\001 \002(\t\022\014\n\004name\030\002 \001(\t\022\024\n\014display_name\030\003 \001" +
-      "(\t\022\020\n\010portrait\030\004 \001(\t\022\016\n\006mobile\030\005 \001(\t\022\r\n\005" +
-      "email\030\006 \001(\t\022\017\n\007address\030\007 \001(\t\022\017\n\007company\030" +
-      "\010 \001(\t\022\r\n\005extra\030\t \001(\t\022\021\n\tupdate_dt\030\n \001(\003\022" +
-      "\016\n\006gender\030\013 \001(\005\022\016\n\006social\030\014 \001(\t\022\014\n\004type\030" +
-      "\r \001(\005\";\n\rNotifyMessage\022\014\n\004type\030\001 \002(\005\022\014\n\004" +
-      "head\030\002 \002(\003\022\016\n\006target\030\003 \001(\t\"4\n\023NotifyReca" +
-      "llMessage\022\n\n\002id\030\001 \002(\003\022\021\n\tfrom_user\030\002 \002(\t",
-      "\"P\n\020UserSettingEntry\022\r\n\005scope\030\001 \002(\005\022\013\n\003k" +
-      "ey\030\002 \002(\t\022\r\n\005value\030\003 \002(\t\022\021\n\tupdate_dt\030\004 \002" +
-      "(\003\"A\n\024ModifyUserSettingReq\022\r\n\005scope\030\001 \002(" +
-      "\005\022\013\n\003key\030\002 \002(\t\022\r\n\005value\030\003 \002(\t\";\n\024GetUser" +
-      "SettingResult\022#\n\005entry\030\001 \003(\0132\024.im.UserSe" +
-      "ttingEntry\"\304\001\n\013ChannelInfo\022\021\n\ttarget_id\030" +
-      "\001 \001(\t\022\014\n\004name\030\002 \002(\t\022\020\n\010portrait\030\003 \001(\t\022\r\n" +
-      "\005owner\030\004 \001(\t\022\016\n\006status\030\005 \001(\005\022\014\n\004desc\030\006 \001" +
-      "(\t\022\r\n\005extra\030\007 \001(\t\022\021\n\tupdate_dt\030\010 \001(\003\022\016\n\006" +
-      "secret\030\t \001(\t\022\020\n\010callback\030\n \001(\t\022\021\n\tautoma",
-      "tic\030\013 \001(\005\"\227\001\n\014ChatroomInfo\022\r\n\005title\030\001 \002(" +
-      "\t\022\014\n\004desc\030\002 \001(\t\022\020\n\010portrait\030\003 \001(\t\022\024\n\014mem" +
-      "ber_count\030\004 \001(\005\022\021\n\tcreate_dt\030\005 \001(\003\022\021\n\tup" +
-      "date_dt\030\006 \001(\003\022\r\n\005extra\030\007 \001(\t\022\r\n\005state\030\010 " +
-      "\001(\005\";\n\022ChatroomMemberInfo\022\024\n\014member_coun" +
-      "t\030\001 \001(\005\022\017\n\007members\030\002 \003(\t\"c\n\005Robot\022\013\n\003uid" +
-      "\030\001 \002(\t\022\r\n\005state\030\002 \002(\005\022\r\n\005owner\030\003 \001(\t\022\016\n\006" +
-      "secret\030\004 \001(\t\022\020\n\010callback\030\005 \001(\t\022\r\n\005extra\030" +
-      "\006 \001(\t\"\323\001\n\014RouteRequest\022\013\n\003app\030\001 \001(\t\022\020\n\010p" +
-      "latform\030\002 \001(\005\022\021\n\tpush_type\030\003 \001(\005\022\023\n\013devi",
-      "ce_name\030\004 \001(\t\022\026\n\016device_version\030\005 \001(\t\022\022\n" +
-      "\nphone_name\030\006 \001(\t\022\020\n\010language\030\007 \001(\t\022\024\n\014c" +
-      "arrier_name\030\010 \001(\t\022\023\n\013app_version\030\t \001(\t\022\023" +
-      "\n\013sdk_version\030\n \001(\tB\'\n\031com.comsince.gith" +
-      "ub.protoB\nFSCMessage"
+      "\022\016\n\006server\030\003 \002(\t\022\014\n\004port\030\004 \001(\005\"5\n\030GetMin" +
+      "ioUploadUrlRequest\022\014\n\004type\030\001 \002(\005\022\013\n\003key\030" +
+      "\002 \002(\t\"T\n\027GetMinioUploadUrlResult\022\016\n\006doma" +
+      "in\030\001 \001(\t\022\016\n\006server\030\002 \001(\t\022\014\n\004port\030\003 \001(\005\022\013" +
+      "\n\003url\030\004 \002(\t\"0\n\016PullUserResult\022\036\n\006result\030" +
+      "\001 \003(\0132\016.im.UserResult\"2\n\nUserResult\022\026\n\004u" +
+      "ser\030\001 \002(\0132\010.im.User\022\014\n\004code\030\002 \002(\005\"-\n\020Get" +
+      "FriendsResult\022\031\n\005entry\030\001 \003(\0132\n.im.Friend" +
+      "\":\n\026GetFriendRequestResult\022 \n\005entry\030\001 \003(" +
+      "\0132\021.im.FriendRequest\"\226\001\n\rFriendRequest\022\020",
+      "\n\010from_uid\030\001 \001(\t\022\016\n\006to_uid\030\002 \002(\t\022\016\n\006reas" +
+      "on\030\003 \002(\t\022\016\n\006status\030\004 \001(\005\022\021\n\tupdate_dt\030\005 " +
+      "\001(\003\022\030\n\020from_read_status\030\006 \001(\010\022\026\n\016to_read" +
+      "_status\030\007 \001(\010\"F\n\006Friend\022\013\n\003uid\030\001 \002(\t\022\r\n\005" +
+      "state\030\002 \002(\005\022\021\n\tupdate_dt\030\003 \002(\003\022\r\n\005alias\030" +
+      "\004 \001(\t\"\332\001\n\004User\022\013\n\003uid\030\001 \002(\t\022\014\n\004name\030\002 \001(" +
+      "\t\022\024\n\014display_name\030\003 \001(\t\022\020\n\010portrait\030\004 \001(" +
+      "\t\022\016\n\006mobile\030\005 \001(\t\022\r\n\005email\030\006 \001(\t\022\017\n\007addr" +
+      "ess\030\007 \001(\t\022\017\n\007company\030\010 \001(\t\022\r\n\005extra\030\t \001(" +
+      "\t\022\021\n\tupdate_dt\030\n \001(\003\022\016\n\006gender\030\013 \001(\005\022\016\n\006",
+      "social\030\014 \001(\t\022\014\n\004type\030\r \001(\005\";\n\rNotifyMess" +
+      "age\022\014\n\004type\030\001 \002(\005\022\014\n\004head\030\002 \002(\003\022\016\n\006targe" +
+      "t\030\003 \001(\t\"4\n\023NotifyRecallMessage\022\n\n\002id\030\001 \002" +
+      "(\003\022\021\n\tfrom_user\030\002 \002(\t\"P\n\020UserSettingEntr" +
+      "y\022\r\n\005scope\030\001 \002(\005\022\013\n\003key\030\002 \002(\t\022\r\n\005value\030\003" +
+      " \002(\t\022\021\n\tupdate_dt\030\004 \002(\003\"A\n\024ModifyUserSet" +
+      "tingReq\022\r\n\005scope\030\001 \002(\005\022\013\n\003key\030\002 \002(\t\022\r\n\005v" +
+      "alue\030\003 \002(\t\";\n\024GetUserSettingResult\022#\n\005en" +
+      "try\030\001 \003(\0132\024.im.UserSettingEntry\"\304\001\n\013Chan" +
+      "nelInfo\022\021\n\ttarget_id\030\001 \001(\t\022\014\n\004name\030\002 \002(\t",
+      "\022\020\n\010portrait\030\003 \001(\t\022\r\n\005owner\030\004 \001(\t\022\016\n\006sta" +
+      "tus\030\005 \001(\005\022\014\n\004desc\030\006 \001(\t\022\r\n\005extra\030\007 \001(\t\022\021" +
+      "\n\tupdate_dt\030\010 \001(\003\022\016\n\006secret\030\t \001(\t\022\020\n\010cal" +
+      "lback\030\n \001(\t\022\021\n\tautomatic\030\013 \001(\005\"\227\001\n\014Chatr" +
+      "oomInfo\022\r\n\005title\030\001 \002(\t\022\014\n\004desc\030\002 \001(\t\022\020\n\010" +
+      "portrait\030\003 \001(\t\022\024\n\014member_count\030\004 \001(\005\022\021\n\t" +
+      "create_dt\030\005 \001(\003\022\021\n\tupdate_dt\030\006 \001(\003\022\r\n\005ex" +
+      "tra\030\007 \001(\t\022\r\n\005state\030\010 \001(\005\";\n\022ChatroomMemb" +
+      "erInfo\022\024\n\014member_count\030\001 \001(\005\022\017\n\007members\030" +
+      "\002 \003(\t\"c\n\005Robot\022\013\n\003uid\030\001 \002(\t\022\r\n\005state\030\002 \002",
+      "(\005\022\r\n\005owner\030\003 \001(\t\022\016\n\006secret\030\004 \001(\t\022\020\n\010cal" +
+      "lback\030\005 \001(\t\022\r\n\005extra\030\006 \001(\t\"\323\001\n\014RouteRequ" +
+      "est\022\013\n\003app\030\001 \001(\t\022\020\n\010platform\030\002 \001(\005\022\021\n\tpu" +
+      "sh_type\030\003 \001(\005\022\023\n\013device_name\030\004 \001(\t\022\026\n\016de" +
+      "vice_version\030\005 \001(\t\022\022\n\nphone_name\030\006 \001(\t\022\020" +
+      "\n\010language\030\007 \001(\t\022\024\n\014carrier_name\030\010 \001(\t\022\023" +
+      "\n\013app_version\030\t \001(\t\022\023\n\013sdk_version\030\n \001(\t" +
+      "B\'\n\031com.comsince.github.protoB\nFSCMessag" +
+      "e"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -42821,104 +44275,116 @@ public final class FSCMessage {
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_im_GetUploadTokenResult_descriptor,
               new java.lang.String[] { "Domain", "Token", "Server", "Port", });
-          internal_static_im_PullUserResult_descriptor =
+          internal_static_im_GetMinioUploadUrlRequest_descriptor =
             getDescriptor().getMessageTypes().get(31);
+          internal_static_im_GetMinioUploadUrlRequest_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_im_GetMinioUploadUrlRequest_descriptor,
+              new java.lang.String[] { "Type", "Key", });
+          internal_static_im_GetMinioUploadUrlResult_descriptor =
+            getDescriptor().getMessageTypes().get(32);
+          internal_static_im_GetMinioUploadUrlResult_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+              internal_static_im_GetMinioUploadUrlResult_descriptor,
+              new java.lang.String[] { "Domain", "Server", "Port", "Url", });
+          internal_static_im_PullUserResult_descriptor =
+            getDescriptor().getMessageTypes().get(33);
           internal_static_im_PullUserResult_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_im_PullUserResult_descriptor,
               new java.lang.String[] { "Result", });
           internal_static_im_UserResult_descriptor =
-            getDescriptor().getMessageTypes().get(32);
+            getDescriptor().getMessageTypes().get(34);
           internal_static_im_UserResult_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_im_UserResult_descriptor,
               new java.lang.String[] { "User", "Code", });
           internal_static_im_GetFriendsResult_descriptor =
-            getDescriptor().getMessageTypes().get(33);
+            getDescriptor().getMessageTypes().get(35);
           internal_static_im_GetFriendsResult_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_im_GetFriendsResult_descriptor,
               new java.lang.String[] { "Entry", });
           internal_static_im_GetFriendRequestResult_descriptor =
-            getDescriptor().getMessageTypes().get(34);
+            getDescriptor().getMessageTypes().get(36);
           internal_static_im_GetFriendRequestResult_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_im_GetFriendRequestResult_descriptor,
               new java.lang.String[] { "Entry", });
           internal_static_im_FriendRequest_descriptor =
-            getDescriptor().getMessageTypes().get(35);
+            getDescriptor().getMessageTypes().get(37);
           internal_static_im_FriendRequest_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_im_FriendRequest_descriptor,
               new java.lang.String[] { "FromUid", "ToUid", "Reason", "Status", "UpdateDt", "FromReadStatus", "ToReadStatus", });
           internal_static_im_Friend_descriptor =
-            getDescriptor().getMessageTypes().get(36);
+            getDescriptor().getMessageTypes().get(38);
           internal_static_im_Friend_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_im_Friend_descriptor,
               new java.lang.String[] { "Uid", "State", "UpdateDt", "Alias", });
           internal_static_im_User_descriptor =
-            getDescriptor().getMessageTypes().get(37);
+            getDescriptor().getMessageTypes().get(39);
           internal_static_im_User_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_im_User_descriptor,
               new java.lang.String[] { "Uid", "Name", "DisplayName", "Portrait", "Mobile", "Email", "Address", "Company", "Extra", "UpdateDt", "Gender", "Social", "Type", });
           internal_static_im_NotifyMessage_descriptor =
-            getDescriptor().getMessageTypes().get(38);
+            getDescriptor().getMessageTypes().get(40);
           internal_static_im_NotifyMessage_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_im_NotifyMessage_descriptor,
               new java.lang.String[] { "Type", "Head", "Target", });
           internal_static_im_NotifyRecallMessage_descriptor =
-            getDescriptor().getMessageTypes().get(39);
+            getDescriptor().getMessageTypes().get(41);
           internal_static_im_NotifyRecallMessage_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_im_NotifyRecallMessage_descriptor,
               new java.lang.String[] { "Id", "FromUser", });
           internal_static_im_UserSettingEntry_descriptor =
-            getDescriptor().getMessageTypes().get(40);
+            getDescriptor().getMessageTypes().get(42);
           internal_static_im_UserSettingEntry_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_im_UserSettingEntry_descriptor,
               new java.lang.String[] { "Scope", "Key", "Value", "UpdateDt", });
           internal_static_im_ModifyUserSettingReq_descriptor =
-            getDescriptor().getMessageTypes().get(41);
+            getDescriptor().getMessageTypes().get(43);
           internal_static_im_ModifyUserSettingReq_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_im_ModifyUserSettingReq_descriptor,
               new java.lang.String[] { "Scope", "Key", "Value", });
           internal_static_im_GetUserSettingResult_descriptor =
-            getDescriptor().getMessageTypes().get(42);
+            getDescriptor().getMessageTypes().get(44);
           internal_static_im_GetUserSettingResult_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_im_GetUserSettingResult_descriptor,
               new java.lang.String[] { "Entry", });
           internal_static_im_ChannelInfo_descriptor =
-            getDescriptor().getMessageTypes().get(43);
+            getDescriptor().getMessageTypes().get(45);
           internal_static_im_ChannelInfo_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_im_ChannelInfo_descriptor,
               new java.lang.String[] { "TargetId", "Name", "Portrait", "Owner", "Status", "Desc", "Extra", "UpdateDt", "Secret", "Callback", "Automatic", });
           internal_static_im_ChatroomInfo_descriptor =
-            getDescriptor().getMessageTypes().get(44);
+            getDescriptor().getMessageTypes().get(46);
           internal_static_im_ChatroomInfo_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_im_ChatroomInfo_descriptor,
               new java.lang.String[] { "Title", "Desc", "Portrait", "MemberCount", "CreateDt", "UpdateDt", "Extra", "State", });
           internal_static_im_ChatroomMemberInfo_descriptor =
-            getDescriptor().getMessageTypes().get(45);
+            getDescriptor().getMessageTypes().get(47);
           internal_static_im_ChatroomMemberInfo_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_im_ChatroomMemberInfo_descriptor,
               new java.lang.String[] { "MemberCount", "Members", });
           internal_static_im_Robot_descriptor =
-            getDescriptor().getMessageTypes().get(46);
+            getDescriptor().getMessageTypes().get(48);
           internal_static_im_Robot_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_im_Robot_descriptor,
               new java.lang.String[] { "Uid", "State", "Owner", "Secret", "Callback", "Extra", });
           internal_static_im_RouteRequest_descriptor =
-            getDescriptor().getMessageTypes().get(47);
+            getDescriptor().getMessageTypes().get(49);
           internal_static_im_RouteRequest_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_im_RouteRequest_descriptor,

@@ -228,6 +228,18 @@ message GetUploadTokenResult
 	optional int32 port = 4;
 }
 
+message GetMinioUploadUrlRequest{
+	required int32 type = 1;
+	required string key = 2;
+}
+
+message GetMinioUploadUrlResult{
+    optional string domain = 1;
+	optional string server = 2;
+	optional int32 port = 3;
+	required string url = 4;
+}
+
 message PullUserResult
 {
 	repeated UserResult result = 1;
