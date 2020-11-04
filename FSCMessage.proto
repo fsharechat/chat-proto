@@ -386,3 +386,50 @@ message RouteRequest
 	optional string app_version = 9;
 	optional string sdk_version = 10;
 }
+
+message DeliveryReport
+{
+	required int64 date = 1;
+	required string target = 2;
+    optional string uid = 3;
+    optional int64 rid = 4;
+}
+
+message ReadReport
+{
+	optional int32 type = 1;
+	optional int32 line = 2;
+	required string target = 3;
+	required int64 date = 4;
+	optional string uid = 5;
+	optional int64 rid = 6;
+	repeated string tos = 7;
+}
+
+message PullMessageReportRequest
+{
+	required int64 id = 1;
+	required int32 type = 2;
+}
+
+message MessageReport
+{
+    required int32 report_type = 1;
+	required string uid = 2;
+	required int64 date = 3;
+	required string target = 4;
+}
+
+message PullMessageReportResult
+{
+	repeated MessageReport report = 1;
+	required int64 current = 2;
+	required int64 head = 3;
+}
+
+message NotifyMessageReport
+{
+	required int32 type = 1;
+	required int64 head = 2;
+}
+
