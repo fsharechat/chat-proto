@@ -2,6 +2,8 @@
 
 本项目是`universe_push`消息定义proto
 
+**NOTE:** WFCMessage 与FSCMessage 是一样的，只是为了客户端兼容
+
 
 ## 安装protoBuf 2.5
 
