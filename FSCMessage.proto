@@ -152,6 +152,7 @@ message Message
 	optional int64 server_timestamp = 5;
 	optional string to_user = 6;
 	repeated string to = 7;
+	optional int64 local_message_id = 8;
 }
 
 message LoadRemoteMessages
